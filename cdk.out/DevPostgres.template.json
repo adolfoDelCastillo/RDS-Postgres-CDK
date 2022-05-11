@@ -1,0 +1,197 @@
+{
+ "Resources": {
+  "DevPostgresDBSGAD47EA2B": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "DevPostgres/Dev-PostgresDB-SG",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "VpcId": "vpc-05c4e7f26a2d9a81d"
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgresDB-SG/Resource"
+   }
+  },
+  "DevPostgresDBSGfromDevPostgresDevPostgresDBSGDABC3DD7543272BCE52A": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "IpProtocol": "tcp",
+    "Description": "allow 5432 access from my IP",
+    "FromPort": 5432,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "DevPostgresDBSGAD47EA2B",
+      "GroupId"
+     ]
+    },
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "DevPostgresDBSGAD47EA2B",
+      "GroupId"
+     ]
+    },
+    "ToPort": 5432
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgresDB-SG/from DevPostgresDevPostgresDBSGDABC3DD7:5432"
+   }
+  },
+  "DevPostgresDBSGfrom00000IndirectPortCB5F9293": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "IpProtocol": "tcp",
+    "CidrIp": "0.0.0.0/0",
+    "Description": "from 0.0.0.0/0:{IndirectPort}",
+    "FromPort": {
+     "Fn::GetAtt": [
+      "DevPostgreDBInstanceD09C6855",
+      "Endpoint.Port"
+     ]
+    },
+    "GroupId": {
+     "Fn::GetAtt": [
+      "DevPostgresDBSGAD47EA2B",
+      "GroupId"
+     ]
+    },
+    "ToPort": {
+     "Fn::GetAtt": [
+      "DevPostgreDBInstanceD09C6855",
+      "Endpoint.Port"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgresDB-SG/from 0.0.0.0_0:{IndirectPort}"
+   }
+  },
+  "DevPostgresDBSecret1492EB53": {
+   "Type": "AWS::SecretsManager::Secret",
+   "Properties": {
+    "GenerateSecretString": {
+     "ExcludePunctuation": true,
+     "GenerateStringKey": "password",
+     "IncludeSpace": false,
+     "SecretStringTemplate": "{\"username\":\"postgres\"}"
+    },
+    "Name": "Dev-PostgresDB-Credentials"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgresDB-Secret/Resource"
+   }
+  },
+  "DevPostgresDBSecretAttachment4B12CF0B": {
+   "Type": "AWS::SecretsManager::SecretTargetAttachment",
+   "Properties": {
+    "SecretId": {
+     "Ref": "DevPostgresDBSecret1492EB53"
+    },
+    "TargetId": {
+     "Ref": "DevPostgreDBInstanceD09C6855"
+    },
+    "TargetType": "AWS::RDS::DBInstance"
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgresDB-Secret/Attachment/Resource"
+   }
+  },
+  "DevPostgreDBInstanceSubnetGroup925A55BF": {
+   "Type": "AWS::RDS::DBSubnetGroup",
+   "Properties": {
+    "DBSubnetGroupDescription": "Subnet group for Dev-PostgreDB-Instance database",
+    "SubnetIds": [
+     "subnet-0763b18c58abd2743",
+     "subnet-08b5204f5cb210305",
+     "subnet-07e95adc1e63d74c3",
+     "subnet-000b34b5d8d257d7f",
+     "subnet-0667281bba74ee1ff",
+     "subnet-0af6cef5239920e97"
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgreDB-Instance/SubnetGroup/Default"
+   }
+  },
+  "DevPostgreDBInstanceD09C6855": {
+   "Type": "AWS::RDS::DBInstance",
+   "Properties": {
+    "DBInstanceClass": "db.t2.small",
+    "AllocatedStorage": "100",
+    "CopyTagsToSnapshot": true,
+    "DBInstanceIdentifier": "dev-postgresdb-instance",
+    "DBSubnetGroupName": {
+     "Ref": "DevPostgreDBInstanceSubnetGroup925A55BF"
+    },
+    "Engine": "postgres",
+    "EngineVersion": "12.10",
+    "MasterUsername": {
+     "Fn::Join": [
+      "",
+      [
+       "{{resolve:secretsmanager:",
+       {
+        "Ref": "DevPostgresDBSecret1492EB53"
+       },
+       ":SecretString:username::}}"
+      ]
+     ]
+    },
+    "MasterUserPassword": {
+     "Fn::Join": [
+      "",
+      [
+       "{{resolve:secretsmanager:",
+       {
+        "Ref": "DevPostgresDBSecret1492EB53"
+       },
+       ":SecretString:password::}}"
+      ]
+     ]
+    },
+    "MaxAllocatedStorage": 200,
+    "PubliclyAccessible": true,
+    "StorageEncrypted": true,
+    "StorageType": "gp2",
+    "VPCSecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "DevPostgresDBSGAD47EA2B",
+       "GroupId"
+      ]
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/Dev-PostgreDB-Instance/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31QSwrCQAw9i/txtKKu/YG4EtQLxGmsVZqRJKNImbs79YcouEryPuElmc0GA9ttjeAibZcfO7XzjLZeK7ijWaH4wA7NdEfLoKegZupJlIPTBnvx0TT2Gl0vOdEFLvU6Zx9Ojeg/sKCCUSQaQceoUgFBgXzfk+anvukeZQNcoI415dtXSB+CbyYazsXWM1DYguAi5QZKt6zDllDfaWaTH+AljTEa8jnag3TO2dBm/fSpg5RlmwNpWaFdPeoNOfJw00YBAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "DevPostgres/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "RDSEndpoint": {
+   "Value": {
+    "Fn::GetAtt": [
+     "DevPostgreDBInstanceD09C6855",
+     "Endpoint.Address"
+    ]
+   }
+  }
+ }
+}

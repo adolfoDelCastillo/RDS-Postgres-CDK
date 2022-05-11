@@ -1,0 +1,1156 @@
+{
+  "version": "18.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "PublicVpcStack-dev": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "PublicVpcStack-dev.template.json",
+        "tags": {
+          "env": "dev"
+        },
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/dev/CdkVpcStack-dev": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "env",
+                "Value": "dev"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
+              "Object.addStackArtifactToAssembly (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stack-synthesizers/_shared.ts:30:16)",
+              "LegacyStackSynthesizer.emitStackArtifact (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stack-synthesizers/stack-synthesizer.ts:57:5)",
+              "LegacyStackSynthesizer.synthesize (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:123:10)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdev40FE7090",
+            "trace": [
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1309:21)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet1Subnet2E5BA7CD",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1659:20)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet1RouteTableBAB070A9",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1677:19)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet1RouteTableAssociation9238E021",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1683:5)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet1DefaultRouteED0BB5F4",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1699:19)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1362:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:46)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet2Subnet36E5D111",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1659:20)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet2RouteTable9AF6B4A9",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1677:19)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet2RouteTableAssociation92725AC0",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1683:5)",
+              "new PublicSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1874:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevPublicSubnet2DefaultRouteA0D83C31",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1699:19)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1362:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:46)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet1Subnet67C5652D",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1659:20)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet1RouteTable844CC2A0",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1677:19)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet1RouteTableAssociation7FFDE9FB",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1683:5)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet2Subnet72D17B2E",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1659:20)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet2RouteTable40190450",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1677:19)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIsolatedSubnet2RouteTableAssociation90C47141",
+            "trace": [
+              "new Subnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1683:5)",
+              "new PrivateSubnet (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1912:5)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1515:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1476:28)",
+              "Vpc.createSubnets (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1471:12)",
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1343:10)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevIGWB7312726",
+            "trace": [
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:19)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/VPC-dev/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCdevVPCGW4719F1C7",
+            "trace": [
+              "new Vpc (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:19)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:23:16)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/dev-DBCredentialsSecret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devDBCredentialsSecretAC41D42B",
+            "trace": [
+              "new Secret (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:578:22)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:30:38)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/dev-DBCredentialsSecret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devDBCredentialsSecretAttachmentDDE25EBF",
+            "trace": [
+              "new SecretTargetAttachment (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:782:24)",
+              "Secret.attach (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:439:12)",
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1035:28)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:77:24)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/Secret Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecretName",
+            "trace": [
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:43:5)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/Secret ARN": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecretARN",
+            "trace": [
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:44:5)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/Secret Full ARN": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecretFullARN",
+            "trace": [
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:45:5)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/DBCredentialsArn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBCredentialsArn15122902",
+            "trace": [
+              "new StringParameter (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:468:22)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:48:5)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/SG/from 0.0.0.0_0:5432": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SGfrom00000543248DACBDE",
+            "trace": [
+              "MutableImport.addIngressRule (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:92:7)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:58:33)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/dev-instance/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devinstanceSubnetGroup331B235A",
+            "trace": [
+              "new SubnetGroup (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/subnet-group.ts:78:25)",
+              "new DatabaseInstanceNew (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:668:46)",
+              "new DatabaseInstanceSource (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:856:5)",
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1010:5)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:77:24)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/dev-instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devinstance6D86B8B8",
+            "trace": [
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1015:22)",
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:77:24)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/RDS Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RDSEndpoint",
+            "trace": [
+              "new CdkBaseStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres-cluster.ts:80:5)",
+              "new DemoApp (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:30:35)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:37:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/dev/CdkVpcStack-dev/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "dev/CdkVpcStack-dev"
+    },
+    "DevPostgres": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://557525086023/us-east-1",
+      "properties": {
+        "templateFile": "DevPostgres.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/DevPostgres/Dev-PostgresDB-SG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgresDBSGAD47EA2B",
+            "trace": [
+              "new SecurityGroup (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:466:26)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:33:30)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgresDB-SG/from DevPostgresDevPostgresDBSGDABC3DD7:5432": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgresDBSGfromDevPostgresDevPostgresDBSGDABC3DD7543272BCE52A",
+            "trace": [
+              "SecurityGroup.addIngressRule (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:92:7)",
+              "SecurityGroup.addIngressRule (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:483:13)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:40:24)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgresDB-SG/from 0.0.0.0_0:{IndirectPort}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgresDBSGfrom00000IndirectPortCB5F9293",
+            "trace": [
+              "SecurityGroup.addIngressRule (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:92:7)",
+              "SecurityGroup.addIngressRule (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:483:13)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:157:23",
+              "ReactiveList.forEachAndForever (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:270:7)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:156:45",
+              "ReactiveList.forEachAndForever (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:270:7)",
+              "Connections.allowFrom (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:155:26)",
+              "Connections.allowFromAnyIpv4 (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:194:10)",
+              "Connections.allowDefaultPortFromAnyIpv4 (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:226:10)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:89:36)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgresDB-Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgresDBSecret1492EB53",
+            "trace": [
+              "new Secret (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:578:22)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:47:42)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgresDB-Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgresDBSecretAttachment4B12CF0B",
+            "trace": [
+              "new SecretTargetAttachment (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:782:24)",
+              "Secret.attach (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:439:12)",
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1035:28)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:87:26)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgreDB-Instance/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgreDBInstanceSubnetGroup925A55BF",
+            "trace": [
+              "new SubnetGroup (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/subnet-group.ts:78:25)",
+              "new DatabaseInstanceNew (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:668:46)",
+              "new DatabaseInstanceSource (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:856:5)",
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1010:5)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:87:26)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/Dev-PostgreDB-Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevPostgreDBInstanceD09C6855",
+            "trace": [
+              "new DatabaseInstance (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/aws-rds/lib/instance.ts:1015:22)",
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:87:26)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/RDS Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RDSEndpoint",
+            "trace": [
+              "new CreatePostgresClusterStack (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/lib/create-postgres.ts:91:7)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/bin/rds.ts:42:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Module.m._compile (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "main (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1103:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/DevPostgres/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/stage.ts:180:23)",
+              "process.<anonymous> (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/@aws-cdk/core/lib/app.ts:131:45)",
+              "Object.onceWrapper (node:events:640:26)",
+              "process.emit (node:events:520:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/adolfo.delcastillo/Documents/Course/CDK/RDS/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "DevPostgres"
+    }
+  }
+}

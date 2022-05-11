@@ -1,0 +1,20 @@
+{
+  "version": "17.0.0",
+  "files": {
+    "0a77f5d8f0e49c39ba34307cdb25ba5aae7d5be5e23e958ac398f002ef028a90": {
+      "source": {
+        "path": "Postgres-DB.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "557525086023-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-557525086023-us-east-1",
+          "objectKey": "0a77f5d8f0e49c39ba34307cdb25ba5aae7d5be5e23e958ac398f002ef028a90.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::557525086023:role/cdk-hnb659fds-file-publishing-role-557525086023-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

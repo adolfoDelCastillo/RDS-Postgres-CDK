@@ -1,0 +1,1176 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.155.0"
+        }
+      },
+      "dev": {
+        "id": "dev",
+        "path": "dev",
+        "children": {
+          "CdkVpcStack-dev": {
+            "id": "CdkVpcStack-dev",
+            "path": "dev/CdkVpcStack-dev",
+            "children": {
+              "VPC-dev": {
+                "id": "VPC-dev",
+                "path": "dev/CdkVpcStack-dev/VPC-dev",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "instanceTenancy": "default",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dev/CdkVpcStack-dev/VPC-dev"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "PublicSubnet1": {
+                    "id": "PublicSubnet1",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "cidrBlock": "10.0.0.0/18",
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevPublicSubnet1RouteTableBAB070A9"
+                            },
+                            "subnetId": {
+                              "Ref": "VPCdevPublicSubnet1Subnet2E5BA7CD"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevPublicSubnet1RouteTableBAB070A9"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "VPCdevIGWB7312726"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "PublicSubnet2": {
+                    "id": "PublicSubnet2",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "cidrBlock": "10.0.64.0/18",
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevPublicSubnet2RouteTable9AF6B4A9"
+                            },
+                            "subnetId": {
+                              "Ref": "VPCdevPublicSubnet2Subnet36E5D111"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/PublicSubnet2/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevPublicSubnet2RouteTable9AF6B4A9"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "VPCdevIGWB7312726"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "IsolatedSubnet1": {
+                    "id": "IsolatedSubnet1",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "cidrBlock": "10.0.128.0/18",
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevIsolatedSubnet1RouteTable844CC2A0"
+                            },
+                            "subnetId": {
+                              "Ref": "VPCdevIsolatedSubnet1Subnet67C5652D"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "IsolatedSubnet2": {
+                    "id": "IsolatedSubnet2",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "cidrBlock": "10.0.192.0/18",
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Isolated"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "VPCdev40FE7090"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.155.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "dev/CdkVpcStack-dev/VPC-dev/IsolatedSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "VPCdevIsolatedSubnet2RouteTable40190450"
+                            },
+                            "subnetId": {
+                              "Ref": "VPCdevIsolatedSubnet2Subnet72D17B2E"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "IGW": {
+                    "id": "IGW",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/IGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "dev/CdkVpcStack-dev/VPC-dev"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "VPCGW": {
+                    "id": "VPCGW",
+                    "path": "dev/CdkVpcStack-dev/VPC-dev/VPCGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "VPCdev40FE7090"
+                        },
+                        "internetGatewayId": {
+                          "Ref": "VPCdevIGWB7312726"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.Vpc",
+                  "version": "1.155.0"
+                }
+              },
+              "dev-DBCredentialsSecret": {
+                "id": "dev-DBCredentialsSecret",
+                "path": "dev/CdkVpcStack-dev/dev-DBCredentialsSecret",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev/CdkVpcStack-dev/dev-DBCredentialsSecret/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SecretsManager::Secret",
+                      "aws:cdk:cloudformation:props": {
+                        "generateSecretString": {
+                          "secretStringTemplate": "{\"username\":\"postgres\"}",
+                          "excludePunctuation": true,
+                          "includeSpace": false,
+                          "generateStringKey": "password"
+                        },
+                        "name": "dev-credentials"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-secretsmanager.CfnSecret",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "Attachment": {
+                    "id": "Attachment",
+                    "path": "dev/CdkVpcStack-dev/dev-DBCredentialsSecret/Attachment",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev/CdkVpcStack-dev/dev-DBCredentialsSecret/Attachment/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::SecretsManager::SecretTargetAttachment",
+                          "aws:cdk:cloudformation:props": {
+                            "secretId": {
+                              "Ref": "devDBCredentialsSecretAC41D42B"
+                            },
+                            "targetId": {
+                              "Ref": "devinstance6D86B8B8"
+                            },
+                            "targetType": "AWS::RDS::DBInstance"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-secretsmanager.CfnSecretTargetAttachment",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-secretsmanager.SecretTargetAttachment",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-secretsmanager.Secret",
+                  "version": "1.155.0"
+                }
+              },
+              "Secret Name": {
+                "id": "Secret Name",
+                "path": "dev/CdkVpcStack-dev/Secret Name",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.155.0"
+                }
+              },
+              "Secret ARN": {
+                "id": "Secret ARN",
+                "path": "dev/CdkVpcStack-dev/Secret ARN",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.155.0"
+                }
+              },
+              "Secret Full ARN": {
+                "id": "Secret Full ARN",
+                "path": "dev/CdkVpcStack-dev/Secret Full ARN",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.155.0"
+                }
+              },
+              "DBCredentialsArn": {
+                "id": "DBCredentialsArn",
+                "path": "dev/CdkVpcStack-dev/DBCredentialsArn",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev/CdkVpcStack-dev/DBCredentialsArn/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "type": "String",
+                        "value": {
+                          "Ref": "devDBCredentialsSecretAC41D42B"
+                        },
+                        "name": "dev-credentials-arn"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ssm.CfnParameter",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ssm.StringParameter",
+                  "version": "1.155.0"
+                }
+              },
+              "SG": {
+                "id": "SG",
+                "path": "dev/CdkVpcStack-dev/SG",
+                "children": {
+                  "from 0.0.0.0_0:5432": {
+                    "id": "from 0.0.0.0_0:5432",
+                    "path": "dev/CdkVpcStack-dev/SG/from 0.0.0.0_0:5432",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                      "aws:cdk:cloudformation:props": {
+                        "ipProtocol": "tcp",
+                        "cidrIp": "0.0.0.0/0",
+                        "description": "allow 5432 access from my IP",
+                        "fromPort": 5432,
+                        "groupId": {
+                          "Fn::GetAtt": [
+                            "VPCdev40FE7090",
+                            "DefaultSecurityGroup"
+                          ]
+                        },
+                        "toPort": 5432
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupIngress",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "dev-instance": {
+                "id": "dev-instance",
+                "path": "dev/CdkVpcStack-dev/dev-instance",
+                "children": {
+                  "SubnetGroup": {
+                    "id": "SubnetGroup",
+                    "path": "dev/CdkVpcStack-dev/dev-instance/SubnetGroup",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "dev/CdkVpcStack-dev/dev-instance/SubnetGroup/Default",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::RDS::DBSubnetGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "dbSubnetGroupDescription": "Subnet group for dev-instance database",
+                            "subnetIds": [
+                              {
+                                "Ref": "VPCdevPublicSubnet1Subnet2E5BA7CD"
+                              },
+                              {
+                                "Ref": "VPCdevPublicSubnet2Subnet36E5D111"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-rds.CfnDBSubnetGroup",
+                          "version": "1.155.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-rds.SubnetGroup",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev/CdkVpcStack-dev/dev-instance/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::RDS::DBInstance",
+                      "aws:cdk:cloudformation:props": {
+                        "dbInstanceClass": "db.t2.small",
+                        "allocatedStorage": "100",
+                        "copyTagsToSnapshot": true,
+                        "dbInstanceIdentifier": "dev",
+                        "dbSubnetGroupName": {
+                          "Ref": "devinstanceSubnetGroup331B235A"
+                        },
+                        "engine": "postgres",
+                        "engineVersion": "12.10",
+                        "masterUsername": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "{{resolve:secretsmanager:",
+                              {
+                                "Ref": "devDBCredentialsSecretAC41D42B"
+                              },
+                              ":SecretString:username::}}"
+                            ]
+                          ]
+                        },
+                        "masterUserPassword": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "{{resolve:secretsmanager:",
+                              {
+                                "Ref": "devDBCredentialsSecretAC41D42B"
+                              },
+                              ":SecretString:password::}}"
+                            ]
+                          ]
+                        },
+                        "maxAllocatedStorage": 200,
+                        "publiclyAccessible": true,
+                        "storageType": "gp2",
+                        "vpcSecurityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "VPCdev40FE7090",
+                              "DefaultSecurityGroup"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-rds.CfnDBInstance",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-rds.DatabaseInstance",
+                  "version": "1.155.0"
+                }
+              },
+              "RDS Endpoint": {
+                "id": "RDS Endpoint",
+                "path": "dev/CdkVpcStack-dev/RDS Endpoint",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.155.0"
+                }
+              },
+              "CDKMetadata": {
+                "id": "CDKMetadata",
+                "path": "dev/CdkVpcStack-dev/CDKMetadata",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "dev/CdkVpcStack-dev/CDKMetadata/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.155.0"
+                    }
+                  },
+                  "Condition": {
+                    "id": "Condition",
+                    "path": "dev/CdkVpcStack-dev/CDKMetadata/Condition",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnCondition",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Stack",
+              "version": "1.155.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.155.0"
+        }
+      },
+      "DevPostgres": {
+        "id": "DevPostgres",
+        "path": "DevPostgres",
+        "children": {
+          "Default VPC": {
+            "id": "Default VPC",
+            "path": "DevPostgres/Default VPC",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "DevPostgres/Default VPC/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "DevPostgres/Default VPC/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "DevPostgres/Default VPC/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "DevPostgres/Default VPC/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "PublicSubnet5": {
+                "id": "PublicSubnet5",
+                "path": "DevPostgres/Default VPC/PublicSubnet5",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              },
+              "PublicSubnet6": {
+                "id": "PublicSubnet6",
+                "path": "DevPostgres/Default VPC/PublicSubnet6",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.155.0"
+            }
+          },
+          "Dev-PostgresDB-SG": {
+            "id": "Dev-PostgresDB-SG",
+            "path": "DevPostgres/Dev-PostgresDB-SG",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "DevPostgres/Dev-PostgresDB-SG/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "groupDescription": "DevPostgres/Dev-PostgresDB-SG",
+                    "securityGroupEgress": [
+                      {
+                        "cidrIp": "0.0.0.0/0",
+                        "description": "Allow all outbound traffic by default",
+                        "ipProtocol": "-1"
+                      }
+                    ],
+                    "vpcId": "vpc-05c4e7f26a2d9a81d"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                  "version": "1.155.0"
+                }
+              },
+              "from DevPostgresDevPostgresDBSGDABC3DD7:5432": {
+                "id": "from DevPostgresDevPostgresDBSGDABC3DD7:5432",
+                "path": "DevPostgres/Dev-PostgresDB-SG/from DevPostgresDevPostgresDBSGDABC3DD7:5432",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                  "aws:cdk:cloudformation:props": {
+                    "ipProtocol": "tcp",
+                    "description": "allow 5432 access from my IP",
+                    "fromPort": 5432,
+                    "groupId": {
+                      "Fn::GetAtt": [
+                        "DevPostgresDBSGAD47EA2B",
+                        "GroupId"
+                      ]
+                    },
+                    "sourceSecurityGroupId": {
+                      "Fn::GetAtt": [
+                        "DevPostgresDBSGAD47EA2B",
+                        "GroupId"
+                      ]
+                    },
+                    "toPort": 5432
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupIngress",
+                  "version": "1.155.0"
+                }
+              },
+              "from 0.0.0.0_0:{IndirectPort}": {
+                "id": "from 0.0.0.0_0:{IndirectPort}",
+                "path": "DevPostgres/Dev-PostgresDB-SG/from 0.0.0.0_0:{IndirectPort}",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                  "aws:cdk:cloudformation:props": {
+                    "ipProtocol": "tcp",
+                    "cidrIp": "0.0.0.0/0",
+                    "description": "from 0.0.0.0/0:{IndirectPort}",
+                    "fromPort": {
+                      "Fn::GetAtt": [
+                        "DevPostgreDBInstanceD09C6855",
+                        "Endpoint.Port"
+                      ]
+                    },
+                    "groupId": {
+                      "Fn::GetAtt": [
+                        "DevPostgresDBSGAD47EA2B",
+                        "GroupId"
+                      ]
+                    },
+                    "toPort": {
+                      "Fn::GetAtt": [
+                        "DevPostgreDBInstanceD09C6855",
+                        "Endpoint.Port"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupIngress",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+              "version": "1.155.0"
+            }
+          },
+          "Dev-PostgresDB-Secret": {
+            "id": "Dev-PostgresDB-Secret",
+            "path": "DevPostgres/Dev-PostgresDB-Secret",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "DevPostgres/Dev-PostgresDB-Secret/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SecretsManager::Secret",
+                  "aws:cdk:cloudformation:props": {
+                    "generateSecretString": {
+                      "secretStringTemplate": "{\"username\":\"postgres\"}",
+                      "excludePunctuation": true,
+                      "includeSpace": false,
+                      "generateStringKey": "password"
+                    },
+                    "name": "Dev-PostgresDB-Credentials"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-secretsmanager.CfnSecret",
+                  "version": "1.155.0"
+                }
+              },
+              "Attachment": {
+                "id": "Attachment",
+                "path": "DevPostgres/Dev-PostgresDB-Secret/Attachment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "DevPostgres/Dev-PostgresDB-Secret/Attachment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SecretsManager::SecretTargetAttachment",
+                      "aws:cdk:cloudformation:props": {
+                        "secretId": {
+                          "Ref": "DevPostgresDBSecret1492EB53"
+                        },
+                        "targetId": {
+                          "Ref": "DevPostgreDBInstanceD09C6855"
+                        },
+                        "targetType": "AWS::RDS::DBInstance"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-secretsmanager.CfnSecretTargetAttachment",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-secretsmanager.SecretTargetAttachment",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-secretsmanager.Secret",
+              "version": "1.155.0"
+            }
+          },
+          "Dev-PostgreDB-Instance": {
+            "id": "Dev-PostgreDB-Instance",
+            "path": "DevPostgres/Dev-PostgreDB-Instance",
+            "children": {
+              "SubnetGroup": {
+                "id": "SubnetGroup",
+                "path": "DevPostgres/Dev-PostgreDB-Instance/SubnetGroup",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "DevPostgres/Dev-PostgreDB-Instance/SubnetGroup/Default",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::RDS::DBSubnetGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "dbSubnetGroupDescription": "Subnet group for Dev-PostgreDB-Instance database",
+                        "subnetIds": [
+                          "subnet-0763b18c58abd2743",
+                          "subnet-08b5204f5cb210305",
+                          "subnet-07e95adc1e63d74c3",
+                          "subnet-000b34b5d8d257d7f",
+                          "subnet-0667281bba74ee1ff",
+                          "subnet-0af6cef5239920e97"
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-rds.CfnDBSubnetGroup",
+                      "version": "1.155.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-rds.SubnetGroup",
+                  "version": "1.155.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "DevPostgres/Dev-PostgreDB-Instance/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::RDS::DBInstance",
+                  "aws:cdk:cloudformation:props": {
+                    "dbInstanceClass": "db.t2.small",
+                    "allocatedStorage": "100",
+                    "copyTagsToSnapshot": true,
+                    "dbInstanceIdentifier": "dev-postgresdb-instance",
+                    "dbSubnetGroupName": {
+                      "Ref": "DevPostgreDBInstanceSubnetGroup925A55BF"
+                    },
+                    "engine": "postgres",
+                    "engineVersion": "12.10",
+                    "masterUsername": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{{resolve:secretsmanager:",
+                          {
+                            "Ref": "DevPostgresDBSecret1492EB53"
+                          },
+                          ":SecretString:username::}}"
+                        ]
+                      ]
+                    },
+                    "masterUserPassword": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{{resolve:secretsmanager:",
+                          {
+                            "Ref": "DevPostgresDBSecret1492EB53"
+                          },
+                          ":SecretString:password::}}"
+                        ]
+                      ]
+                    },
+                    "maxAllocatedStorage": 200,
+                    "publiclyAccessible": true,
+                    "storageEncrypted": true,
+                    "storageType": "gp2",
+                    "vpcSecurityGroups": [
+                      {
+                        "Fn::GetAtt": [
+                          "DevPostgresDBSGAD47EA2B",
+                          "GroupId"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-rds.CfnDBInstance",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-rds.DatabaseInstance",
+              "version": "1.155.0"
+            }
+          },
+          "RDS Endpoint": {
+            "id": "RDS Endpoint",
+            "path": "DevPostgres/RDS Endpoint",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.155.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "DevPostgres/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "DevPostgres/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.155.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.155.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.155.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.155.0"
+    }
+  }
+}
